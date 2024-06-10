@@ -1,0 +1,143 @@
+*,
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  background-color: rgb(223, 230, 248);
+}
+
+main {
+  display: grid;
+  grid-template-areas: "left center right";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin: 10rem;
+  max-width: 1300px;
+}
+
+/* Top Right */
+
+.article-top-left {
+  background-color: hsl(263, 55%, 52%);
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 80% 0%;
+  background-size: 140px 140px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  border-radius: 10px;
+  color: white;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+}
+
+.article-top-mid {
+  background-color: hsl(217, 19%, 35%);
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.article-right {
+  background-color: white;
+  border-radius: 10px;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0%;
+}
+
+.article-bottom-mid {
+  background-color: hsl(219, 29%, 14%);
+  grid-column-start: 2;
+  grid-column-end: 4;
+  border-radius: 10px;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  color: white;
+}
+
+.article-bottom-left {
+  background-color: white;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border-radius: 10px;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+}
+
+/* All */
+
+section {
+  display: flex;
+  flex-direction: row;
+}
+
+.Profile-img {
+  height: 50px;
+  width: 50px;
+  margin-top: 0.75rem;
+  border-radius: 50px;
+}
+
+#img-border {
+  border: 3px solid rgb(110, 3, 233);
+}
+
+.name-img {
+  padding-left: 1rem;
+}
+
+span {
+  opacity: 0.5;
+  font-size: 0.75rem;
+}
+
+header {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.content-text {
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 800px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+  }
+}
